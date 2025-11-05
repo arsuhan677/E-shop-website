@@ -1,6 +1,6 @@
 <script setup>
-import Header from './Header.vue';
-import Footer from './Footer.vue';
+import Header from './Header.vue'
+import Footer from './Footer.vue'
 import { useRoute, useRouter } from 'vue-router'
 import { computed, ref } from 'vue'
 
@@ -34,7 +34,6 @@ const products = [
     prise: '50300',
     img: '/images/pp.png',
   },
-  
 ]
 
 const product = computed(() => products[index.value])
@@ -54,13 +53,13 @@ function decrease() {
 }
 
 function goToDashboard() {
-  router.push('/dashboard') // ✅ Go to dashboard route
+  router.push('/dashboard')
 }
 </script>
 
 <template>
   <Header />
-  
+
   <!-- Continue Shopping -->
   <router-link to="">
     <div class="mt-16 py-8 lg:mx-12 xs:mx-5 lg:p-12">
@@ -100,9 +99,7 @@ function goToDashboard() {
     </div>
 
     <!-- Product not found -->
-    <div v-else class="text-center text-red-500 font-semibold mt-10">
-      Product not found.
-    </div>
+    <div v-else class="text-center text-red-500 font-semibold mt-10">Product not found.</div>
 
     <!-- Order Button -->
     <div class="items-center justify-between text-right">
@@ -119,10 +116,3 @@ function goToDashboard() {
 
   <Footer />
 </template>
-
-
-
-
-
-
-
